@@ -1,0 +1,330 @@
+/* =========================================================
+   Custom styles for ISTT landing page
+   ========================================================= */
+
+* {
+  font-family: 'IRANYekan', 'Vazirmatn', Tahoma, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: #0a0a0f;
+  color: #e8e8ec;
+  overflow-x: hidden;
+}
+
+/* Full-height sections — one monitor per section on desktop */
+.section-full {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle grid background texture */
+.grid-texture {
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+/* Course accent colors */
+.accent-1 { --accent: #3b82f6; --accent-soft: rgba(59,130,246,0.12); --accent-ring: rgba(59,130,246,0.35); }
+.accent-2 { --accent: #14b8a6; --accent-soft: rgba(20,184,166,0.12); --accent-ring: rgba(20,184,166,0.35); }
+.accent-3 { --accent: #a78bfa; --accent-soft: rgba(167,139,250,0.12); --accent-ring: rgba(167,139,250,0.35); }
+.accent-4 { --accent: #f59e0b; --accent-soft: rgba(245,158,11,0.12); --accent-ring: rgba(245,158,11,0.35); }
+.accent-5 { --accent: #ec4899; --accent-soft: rgba(236,72,153,0.12); --accent-ring: rgba(236,72,153,0.35); }
+.accent-6 { --accent: #ec4899; --accent-soft: rgba(236,72,153,0.12); --accent-ring: rgba(236,72,153,0.35); }
+
+/* Minimal card */
+.min-card {
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  transition: border-color .3s ease, background .3s ease;
+}
+.min-card:hover {
+  border-color: var(--accent-ring);
+  background: rgba(255,255,255,0.03);
+}
+
+/* Course number inline badge */
+.course-number-inline {
+  font-weight: 900;
+  font-size: clamp(3.5rem, 7vw, 6rem);
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--accent);
+  opacity: 0.8;
+}
+
+/* Thin accent line */
+.accent-line {
+  width: 40px;
+  height: 2px;
+  background: var(--accent);
+  display: inline-block;
+}
+
+/* Bullet with accent */
+.accent-bullet {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: inline-block;
+  flex-shrink: 0;
+  margin-top: 8px;
+}
+
+/* Scroll indicator */
+@keyframes bounce-soft {
+  0%, 100% { transform: translateY(0); opacity: .6; }
+  50% { transform: translateY(8px); opacity: 1; }
+}
+.scroll-indicator { animation: bounce-soft 2.4s ease-in-out infinite; }
+
+/* Fade in on scroll */
+.fade-in {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s ease;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Hero gradient orbs */
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.25;
+  pointer-events: none;
+}
+
+/* Nav dots */
+.nav-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.15);
+  transition: all .3s ease;
+  display: block;
+}
+.nav-dot:hover { background: rgba(255,255,255,0.5); transform: scale(1.3); }
+.nav-dot.active { background: #fff; width: 24px; border-radius: 4px; }
+
+/* Meta info style */
+.meta-label {
+  font-size: 0.7rem;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+}
+.meta-value {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.9);
+  font-weight: 500;
+}
+
+/* Corner ornament */
+.corner-ornament {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border: 1px solid var(--accent);
+  opacity: 0.3;
+}
+.corner-ornament.tl { top: 32px; right: 32px; border-bottom: none; border-left: none; }
+.corner-ornament.br { bottom: 32px; left: 32px; border-top: none; border-right: none; }
+
+/* Divider */
+.thin-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.12), transparent);
+}
+
+/* Hero title */
+.hero-title {
+  font-weight: 900;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+/* Logo mark */
+.logo-mark {
+  width: 72px;
+  height: 72px;
+  border: 1.5px solid rgba(255,255,255,0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+.logo-mark::before {
+  content: '';
+  position: absolute;
+  inset: 8px;
+  border: 1px solid rgba(255,255,255,0.5);
+  border-radius: 50%;
+}
+.logo-mark::after {
+  content: '';
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #fff;
+  border-radius: 50%;
+}
+
+/* Section accent bar */
+.section-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 3px;
+  width: 120px;
+  background: var(--accent);
+}
+
+/* Noise overlay */
+.noise::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.5'/%3E%3C/svg%3E");
+  opacity: 0.025;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+}
+
+/* ===========================================================
+   POSTER FRAME — shows the course poster with subtle treatment
+   Posters are 4:5 (portrait) aspect
+   =========================================================== */
+.poster-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  border-radius: 14px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.08);
+  transition: border-color .3s ease, transform .4s ease;
+  box-shadow: 0 20px 60px -20px rgba(0,0,0,0.6);
+}
+.poster-frame:hover {
+  border-color: var(--accent-ring);
+  transform: translateY(-2px);
+}
+.poster-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+.poster-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.15), transparent 40%);
+  pointer-events: none;
+}
+
+/* ===========================================================
+   VIDEO PLACEHOLDER — vertical 9:16 frame for reels/shorts
+   Replace the placeholder div with <video> when ready
+   =========================================================== */
+.video-placeholder {
+  position: relative;
+  aspect-ratio: 9 / 16;
+  border-radius: 14px;
+  overflow: hidden;
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.03), rgba(255,255,255,0.01)),
+    var(--accent-soft, rgba(255,255,255,0.02));
+  border: 1.5px dashed rgba(255,255,255,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color .3s ease, background .3s ease;
+  cursor: pointer;
+}
+.video-placeholder:hover {
+  border-color: var(--accent);
+  background:
+    linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02)),
+    var(--accent-soft, rgba(255,255,255,0.02));
+}
+.video-placeholder-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  padding: 20px;
+  text-align: center;
+}
+.video-placeholder .play-icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.06);
+  border: 1.5px solid var(--accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+  transition: all .3s ease;
+}
+.video-placeholder:hover .play-icon {
+  background: var(--accent);
+  color: #0a0a0f;
+  transform: scale(1.05);
+}
+.video-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.4);
+  text-transform: uppercase;
+  margin-top: 4px;
+}
+.video-filename {
+  font-size: 0.65rem;
+  color: rgba(255,255,255,0.3);
+  font-family: 'Courier New', monospace;
+  direction: ltr;
+  word-break: break-all;
+}
+
+/* If a real video replaces the placeholder, it inherits these styles */
+.video-placeholder video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ===========================================================
+   Typography refinements for Persian
+   =========================================================== */
+h1, h2, h3 { font-feature-settings: "kern" 1; }
+p, li { line-height: 1.9; }
+
+/* ===========================================================
+   Responsive adjustments
+   =========================================================== */
+@media (max-width: 1024px) {
+  .section-full { min-height: auto; padding-top: 60px; padding-bottom: 60px; }
+}
+
+@media (max-width: 768px) {
+  .corner-ornament { display: none; }
+  .course-number-inline { font-size: 3.5rem; }
+}

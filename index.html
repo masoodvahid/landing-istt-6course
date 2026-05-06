@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>دوره‌های آموزشی توانمندسازی مدیریت پارک‌های علم و فناوری | شهرک علمی و تحقیقاتی اصفهان</title>
+
+<!-- Local stylesheets -->
+<link rel="stylesheet" href="assets/css/fonts.css">
+<link rel="stylesheet" href="assets/css/tailwind.css">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="font-yekan">
+
+<!-- Side navigation dots (desktop only) -->
+<nav class="hidden lg:flex fixed left-8 top-1/2 -translate-y-1/2 z-50 flex-col gap-3">
+  <a href="#hero" class="nav-dot active" aria-label="معرفی"></a>
+  <a href="#course-1" class="nav-dot" aria-label="دوره اول"></a>
+  <a href="#course-2" class="nav-dot" aria-label="دوره دوم"></a>
+  <a href="#course-3" class="nav-dot" aria-label="دوره سوم"></a>
+  <a href="#course-4" class="nav-dot" aria-label="دوره چهارم"></a>
+  <a href="#course-5" class="nav-dot" aria-label="دوره پنجم"></a>
+  <a href="#course-6" class="nav-dot" aria-label="دوره ششم"></a>
+  <a href="#contact" class="nav-dot" aria-label="تماس"></a>
+</nav>
+
+<!-- =========================================================
+     SECTION 1 — HERO
+========================================================= -->
+<section id="hero" class="section-full grid-texture noise">
+  <div class="orb" style="background:#3b82f6; width:500px; height:500px; top:-150px; right:-150px;"></div>
+  <div class="orb" style="background:#ec4899; width:400px; height:400px; bottom:-100px; left:-100px;"></div>
+
+  <!-- Top bar -->
+  <div class="relative z-10 flex items-center justify-between px-6 md:px-16 py-8 border-b border-white/5">
+    <div class="flex items-center gap-4">
+      <div class="logo-mark"></div>
+      <div>
+        <div class="text-xs text-white/50 tracking-widest">ISTT</div>
+        <div class="text-sm md:text-base font-bold text-white">شهرک علمی و تحقیقاتی اصفهان</div>
+      </div>
+    </div>
+    <div class="hidden md:block text-left">
+      <div class="text-xs text-white/40 tracking-widest uppercase">1404</div>
+      <div class="text-sm text-white/70">سال جاری</div>
+    </div>
+  </div>
+
+  <!-- Hero content -->
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16">
+    <div class="max-w-6xl w-full">
+      <div class="flex items-center gap-4 mb-10 fade-in">
+        <span class="accent-line" style="--accent:#ec4899;"></span>
+        <span class="text-sm text-white/60 tracking-wider">گزارش دوره‌های برگزار شده</span>
+      </div>
+
+      <h1 class="hero-title text-4xl md:text-6xl lg:text-7xl text-white mb-8 fade-in">
+        دوره‌های آموزشی
+        <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-l from-pink-400 via-violet-400 to-blue-400">
+          توانمندسازی نیروهای کلیدی
+        </span>
+        <br/>
+        <span class="text-white/80 text-3xl md:text-5xl lg:text-6xl">برای مدیریت پارک‌های علم و فناوری</span>
+      </h1>
+
+      <div class="max-w-3xl space-y-5 fade-in">
+        <p class="text-lg md:text-xl text-white/70 leading-loose">
+          مجموعه‌ای از شش دوره‌ی آموزشی تخصصی که طی سال ۱۴۰۴ با همکاری مرکز منطقه‌ای
+          انکوباتور و توسعه پارک‌های علم و فناوری یونسکو در شهرهای مختلف ایران برگزار گردید.
+        </p>
+        <p class="text-base md:text-lg text-white/55">
+          در این صفحه می‌توانید جزئیات کامل هر دوره، سرفصل‌های آموزشی، تاریخ و محل برگزاری را مشاهده کنید.
+        </p>
+      </div>
+
+      <div class="mt-14 flex items-center gap-8 fade-in">
+        <a href="#course-1" class="inline-flex items-center gap-3 text-white border-b border-white/30 hover:border-white pb-2 transition-colors">
+          <span class="text-base">مشاهده دوره‌ها</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 5v14M5 12l7 7 7-7"/>
+          </svg>
+        </a>
+        <div class="text-sm text-white/40">
+          <span class="text-white/70 font-bold text-lg">۶</span> دوره برگزارشده
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="relative z-10 pb-8 flex justify-center">
+    <div class="scroll-indicator flex flex-col items-center gap-2">
+      <span class="text-xs text-white/40 tracking-widest">پایین</span>
+      <svg width="16" height="24" viewBox="0 0 16 24" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5">
+        <path d="M8 2v18M2 14l6 6 6-6"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     COURSE TEMPLATE — all 6 sections follow the same layout
+     Layout (desktop): [poster | details | video placeholder]
+========================================================= -->
+
+<!-- SECTION 2 — COURSE 1 (Blue) -->
+<section id="course-1" class="section-full accent-1 grid-texture noise">
+  <div class="section-bar"></div>
+  <div class="corner-ornament tl"></div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+    <div class="max-w-7xl w-full mx-auto">
+
+      <!-- Section header -->
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-10 fade-in">
+        <div>
+          <div class="meta-label" style="color: var(--accent);">دوره اول · مهر ۱۴۰۴</div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mt-2 leading-tight">اولین دوره آموزشی</h2>
+          <p class="text-base md:text-lg text-white/55 mt-3">توانمندسازی نیروهای کلیدی برای مدیریت پارک‌های علم و فناوری</p>
+        </div>
+        <div class="course-number-inline">۰۱</div>
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+
+      <!-- 3-column: poster | details | video -->
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <!-- Poster -->
+        <div class="lg:col-span-4 fade-in">
+          <div class="meta-label mb-3">پوستر دوره</div>
+          <div class="poster-frame">
+            <img src="assets/posters/course-1.jpg" alt="پوستر دوره اول" loading="lazy">
+          </div>
+        </div>
+
+        <!-- Details -->
+        <div class="lg:col-span-5 space-y-6 fade-in">
+          <div class="min-card p-5">
+            <div class="meta-label">تاریخ برگزاری</div>
+            <div class="meta-value">چهارشنبه و پنجشنبه</div>
+            <div class="meta-value text-xl font-bold mt-1" style="color: var(--accent);">۹ و ۱۰ مهرماه ۱۴۰۴</div>
+          </div>
+          <div class="min-card p-5">
+            <div class="meta-label">محل برگزاری</div>
+            <div class="meta-value">تهران</div>
+            <div class="text-sm text-white/60 mt-1">سازمان پژوهش‌های علمی و صنعتی ایران — سالن ابوریحان</div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-white/50 tracking-wider mb-4">محتوای دوره</h3>
+            <ul class="space-y-3">
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>مفاهیم اولیه مدیریت پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>نهادهای حامی استارت‌آپ‌ها (رشد مقدماتی، مرکز رشد و شتاب‌دهنده‌ها)</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>تجربیات ایجاد نواحی نوآوری و زیست‌بوم فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>خدمات با ارزش افزوده بالا و پشتیبانی</span></li>
+              <li class="flex gap-3 text-white/60 text-xs italic pt-2 border-t border-white/5 mt-4"><span class="accent-bullet opacity-50"></span><span>به همراه بازدید از پارک علم و فناوری سازمان پژوهش‌های علمی و صنعتی ایران</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Video placeholder -->
+        <div class="lg:col-span-3 fade-in">
+          <div class="meta-label mb-3">ویدئوی دوره</div>
+          <div class="video-placeholder" data-video="course-1.mp4">
+            <div class="video-placeholder-inner">
+              <div class="play-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z"/>
+                </svg>
+              </div>
+              <div class="video-label">placeholder</div>
+              <div class="video-filename">assets/videos/course-1.mp4</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 px-6 md:px-16 pb-6 flex items-center justify-between text-xs text-white/30 tracking-widest">
+    <span>COURSE 01 / 06</span>
+    <span>ISTT × UNESCO</span>
+  </div>
+</section>
+
+<!-- SECTION 3 — COURSE 2 (Teal) -->
+<section id="course-2" class="section-full accent-2 grid-texture noise">
+  <div class="section-bar"></div>
+  <div class="corner-ornament tl"></div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+    <div class="max-w-7xl w-full mx-auto">
+
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-10 fade-in">
+        <div>
+          <div class="meta-label" style="color: var(--accent);">دوره دوم · آبان ۱۴۰۴</div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mt-2 leading-tight">دومین دوره آموزشی</h2>
+          <p class="text-base md:text-lg text-white/55 mt-3">توانمندسازی نیروهای کلیدی برای مدیریت پارک‌های علم و فناوری</p>
+        </div>
+        <div class="course-number-inline">۰۲</div>
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <div class="lg:col-span-4 fade-in">
+          <div class="meta-label mb-3">پوستر دوره</div>
+          <div class="poster-frame">
+            <img src="assets/posters/course-2.jpg" alt="پوستر دوره دوم" loading="lazy">
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6 fade-in">
+          <div class="min-card p-5">
+            <div class="meta-label">تاریخ برگزاری</div>
+            <div class="meta-value">چهارشنبه و پنجشنبه</div>
+            <div class="meta-value text-xl font-bold mt-1" style="color: var(--accent);">۷ و ۸ آبان‌ماه ۱۴۰۴</div>
+          </div>
+          <div class="min-card p-5">
+            <div class="meta-label">محل برگزاری</div>
+            <div class="meta-value">اصفهان</div>
+            <div class="text-sm text-white/60 mt-1">شهرک علمی و تحقیقاتی اصفهان — سالن اجتماعات سروش</div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-white/50 tracking-wider mb-4">محتوای دوره</h3>
+            <ul class="space-y-3">
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>تأثیرگذاری سرمایه‌گذاری بخش خصوصی در شکل‌گیری و توسعه اکوسیستم فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>موانع فرهنگی توسعه زیست‌بوم نوآوری در ایران</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>سبک مدیریتی پارک‌های علم و فناوری (دولتی، خصوصی و مشارکتی)</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>فرآیند جذب و پذیرش واحدهای فناور</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>آموزش، مشاوره و منتورینگ</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>ظرفیت‌های قانونی (قوانین شرکت‌های دانش‌بنیان و جهش تولید دانش‌بنیان)</span></li>
+              <li class="flex gap-3 text-white/60 text-xs italic pt-2 border-t border-white/5 mt-4"><span class="accent-bullet opacity-50"></span><span>به همراه بازدید از شهرک علمی و تحقیقاتی اصفهان</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 fade-in">
+          <div class="meta-label mb-3">ویدئوی دوره</div>
+          <div class="video-placeholder" data-video="course-2.mp4">
+            <div class="video-placeholder-inner">
+              <div class="play-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="video-label">placeholder</div>
+              <div class="video-filename">assets/videos/course-2.mp4</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 px-6 md:px-16 pb-6 flex items-center justify-between text-xs text-white/30 tracking-widest">
+    <span>COURSE 02 / 06</span>
+    <span>ISTT × UNESCO</span>
+  </div>
+</section>
+
+<!-- SECTION 4 — COURSE 3 (Violet) -->
+<section id="course-3" class="section-full accent-3 grid-texture noise">
+  <div class="section-bar"></div>
+  <div class="corner-ornament tl"></div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+    <div class="max-w-7xl w-full mx-auto">
+
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-10 fade-in">
+        <div>
+          <div class="meta-label" style="color: var(--accent);">دوره سوم · آذر ۱۴۰۴</div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mt-2 leading-tight">سومین دوره آموزشی</h2>
+          <p class="text-base md:text-lg text-white/55 mt-3">توانمندسازی نیروهای کلیدی برای مدیریت پارک‌های علم و فناوری</p>
+        </div>
+        <div class="course-number-inline">۰۳</div>
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <div class="lg:col-span-4 fade-in">
+          <div class="meta-label mb-3">پوستر دوره</div>
+          <div class="poster-frame">
+            <img src="assets/posters/course-3.jpg" alt="پوستر دوره سوم" loading="lazy">
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6 fade-in">
+          <div class="min-card p-5">
+            <div class="meta-label">تاریخ برگزاری</div>
+            <div class="meta-value">چهارشنبه و پنجشنبه</div>
+            <div class="meta-value text-xl font-bold mt-1" style="color: var(--accent);">۱۲ و ۱۳ آذرماه ۱۴۰۴</div>
+          </div>
+          <div class="min-card p-5">
+            <div class="meta-label">محل برگزاری</div>
+            <div class="meta-value">تهران</div>
+            <div class="text-sm text-white/60 mt-1">پارک علم و فناوری دانشگاه تهران — تالار شهدای ورزشکار</div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-white/50 tracking-wider mb-4">محتوای دوره</h3>
+            <ul class="space-y-3">
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>زیست‌بوم‌های مولد سرمایه؛ بازتعریف نقش پارک‌های علم و فناوری در تأمین مالی نوآوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>مدل‌های نوین تأمین مالی در زیست‌بوم فناوری و نوآوری (PE، VC، بازار نوآفرین و تأمین مالی جمعی)</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>نقش مدل‌های مشارکت در توسعه زیرساخت‌های زیست‌بوم فناوری و نوآوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>فراتر از سرمایه؛ نقش‌آفرینی بخش خصوصی در توسعه زیست‌بوم فناوری و نوآوری</span></li>
+              <li class="flex gap-3 text-white/60 text-xs italic pt-2 border-t border-white/5 mt-4"><span class="accent-bullet opacity-50"></span><span>به همراه بازدید از پارک علم و فناوری دانشگاه تهران</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 fade-in">
+          <div class="meta-label mb-3">ویدئوی دوره</div>
+          <div class="video-placeholder" data-video="course-3.mp4">
+            <div class="video-placeholder-inner">
+              <div class="play-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="video-label">placeholder</div>
+              <div class="video-filename">assets/videos/course-3.mp4</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 px-6 md:px-16 pb-6 flex items-center justify-between text-xs text-white/30 tracking-widest">
+    <span>COURSE 03 / 06</span>
+    <span>ISTT × UNESCO</span>
+  </div>
+</section>
+
+<!-- SECTION 5 — COURSE 4 (Amber) -->
+<section id="course-4" class="section-full accent-4 grid-texture noise">
+  <div class="section-bar"></div>
+  <div class="corner-ornament tl"></div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+    <div class="max-w-7xl w-full mx-auto">
+
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-10 fade-in">
+        <div>
+          <div class="meta-label" style="color: var(--accent);">دوره چهارم · دی ۱۴۰۴</div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mt-2 leading-tight">چهارمین دوره آموزشی</h2>
+          <p class="text-base md:text-lg text-white/55 mt-3">توانمندسازی نیروهای کلیدی برای مدیریت پارک‌های علم و فناوری</p>
+        </div>
+        <div class="course-number-inline">۰۴</div>
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <div class="lg:col-span-4 fade-in">
+          <div class="meta-label mb-3">پوستر دوره</div>
+          <div class="poster-frame">
+            <img src="assets/posters/course-4.jpg" alt="پوستر دوره چهارم" loading="lazy">
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6 fade-in">
+          <div class="min-card p-5">
+            <div class="meta-label">تاریخ برگزاری</div>
+            <div class="meta-value">چهارشنبه و پنجشنبه</div>
+            <div class="meta-value text-xl font-bold mt-1" style="color: var(--accent);">۱۰ و ۱۱ دی‌ماه ۱۴۰۴</div>
+          </div>
+          <div class="min-card p-5">
+            <div class="meta-label">محل برگزاری</div>
+            <div class="meta-value">یزد</div>
+            <div class="text-sm text-white/60 mt-1">پارک علم و فناوری یزد</div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-white/50 tracking-wider mb-4">محتوای دوره</h3>
+            <ul class="space-y-3">
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>حکمرانی خوب در پارک‌های علم و فناوری و سیاست‌گذاری در این راستا</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>هم‌افزایی و توسعه ارتباطات بین شرکت‌های مستقر در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>انتقال فناوری (همکاری مؤثر بین TTO دانشگاه‌ها و پارک‌های علم و فناوری)</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>از ایده تا تجاری‌سازی (اشتراک تجربه)</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>مدیریت منابع انسانی در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>مدل‌های مقیاس‌پذیر نمودن واحدهای فناور در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/60 text-xs italic pt-2 border-t border-white/5 mt-4"><span class="accent-bullet opacity-50"></span><span>بازدید پارک علم و فناوری یزد و تور یزدگردی</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 fade-in">
+          <div class="meta-label mb-3">ویدئوی دوره</div>
+          <div class="video-placeholder" data-video="course-4.mp4">
+            <div class="video-placeholder-inner">
+              <div class="play-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="video-label">placeholder</div>
+              <div class="video-filename">assets/videos/course-4.mp4</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 px-6 md:px-16 pb-6 flex items-center justify-between text-xs text-white/30 tracking-widest">
+    <span>COURSE 04 / 06</span>
+    <span>ISTT × UNESCO</span>
+  </div>
+</section>
+
+<!-- SECTION 6 — COURSE 5 (Pink) -->
+<section id="course-5" class="section-full accent-5 grid-texture noise">
+  <div class="section-bar"></div>
+  <div class="corner-ornament tl"></div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+    <div class="max-w-7xl w-full mx-auto">
+
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-10 fade-in">
+        <div>
+          <div class="meta-label" style="color: var(--accent);">دوره پنجم · بهمن ۱۴۰۴</div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mt-2 leading-tight">پنجمین دوره آموزشی</h2>
+          <p class="text-base md:text-lg text-white/55 mt-3">توانمندسازی نیروهای کلیدی برای مدیریت پارک‌های علم و فناوری</p>
+        </div>
+        <div class="course-number-inline">۰۵</div>
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <div class="lg:col-span-4 fade-in">
+          <div class="meta-label mb-3">پوستر دوره</div>
+          <div class="poster-frame">
+            <img src="assets/posters/course-5.jpg" alt="پوستر دوره پنجم" loading="lazy">
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6 fade-in">
+          <div class="min-card p-5">
+            <div class="meta-label">تاریخ برگزاری</div>
+            <div class="meta-value">یکشنبه و دوشنبه</div>
+            <div class="meta-value text-xl font-bold mt-1" style="color: var(--accent);">۲۶ و ۲۷ بهمن‌ماه ۱۴۰۴</div>
+          </div>
+          <div class="min-card p-5">
+            <div class="meta-label">محل برگزاری</div>
+            <div class="meta-value">پردیس</div>
+            <div class="text-sm text-white/60 mt-1">پارک فناوری پردیس — ساختمان سراج، سالن اجتماعات سراج</div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-white/50 tracking-wider mb-4">محتوای دوره</h3>
+            <ul class="space-y-3">
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>حکمرانی خوب در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>پنل مدیریت شهری و واگذاری اراضی در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>پنل تعاملات بین‌الملل در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>پنل روابط عمومی در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>ابزارهای نوین در روابط عمومی</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>گزارش ۵ دوره آموزشی توانمندسازی نیروهای کلیدی</span></li>
+              <li class="flex gap-3 text-white/60 text-xs italic pt-2 border-t border-white/5 mt-4"><span class="accent-bullet opacity-50"></span><span>به همراه بازدید از پارک فناوری پردیس</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 fade-in">
+          <div class="meta-label mb-3">ویدئوی دوره</div>
+          <div class="video-placeholder" data-video="course-5.mp4">
+            <div class="video-placeholder-inner">
+              <div class="play-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="video-label">placeholder</div>
+              <div class="video-filename">assets/videos/course-5.mp4</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 px-6 md:px-16 pb-6 flex items-center justify-between text-xs text-white/30 tracking-widest">
+    <span>COURSE 05 / 06</span>
+    <span>ISTT × UNESCO</span>
+  </div>
+</section>
+
+<!-- SECTION 7 — COURSE 6 (Pink duplicate — placeholder) -->
+<section id="course-6" class="section-full accent-6 grid-texture noise">
+  <div class="section-bar"></div>
+  <div class="corner-ornament tl"></div>
+
+  <div class="relative z-10 mx-6 md:mx-16 mt-6">
+    <div class="inline-block text-xs tracking-wider px-3 py-1.5 border border-white/15 text-white/50 rounded-full">
+      ⌁ پیش‌نویس — قابل ویرایش
+    </div>
+  </div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-10">
+    <div class="max-w-7xl w-full mx-auto">
+
+      <div class="flex items-end justify-between flex-wrap gap-6 mb-10 fade-in">
+        <div>
+          <div class="meta-label" style="color: var(--accent);">دوره ششم · در انتظار اطلاعات</div>
+          <h2 class="text-3xl md:text-5xl font-black text-white mt-2 leading-tight">ششمین دوره آموزشی</h2>
+          <p class="text-base md:text-lg text-white/55 mt-3">توانمندسازی نیروهای کلیدی برای مدیریت پارک‌های علم و فناوری</p>
+        </div>
+        <div class="course-number-inline">۰۶</div>
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+
+        <div class="lg:col-span-4 fade-in">
+          <div class="meta-label mb-3">پوستر دوره</div>
+          <div class="poster-frame">
+            <img src="assets/posters/course-6.jpg" alt="پوستر دوره ششم" loading="lazy">
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 space-y-6 fade-in">
+          <div class="min-card p-5">
+            <div class="meta-label">تاریخ برگزاری</div>
+            <div class="meta-value">یکشنبه و دوشنبه</div>
+            <div class="meta-value text-xl font-bold mt-1" style="color: var(--accent);">۲۶ و ۲۷ بهمن‌ماه ۱۴۰۴</div>
+          </div>
+          <div class="min-card p-5">
+            <div class="meta-label">محل برگزاری</div>
+            <div class="meta-value">پردیس</div>
+            <div class="text-sm text-white/60 mt-1">پارک فناوری پردیس — ساختمان سراج، سالن اجتماعات سراج</div>
+          </div>
+
+          <div>
+            <h3 class="text-sm text-white/50 tracking-wider mb-4">محتوای دوره</h3>
+            <ul class="space-y-3">
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>حکمرانی خوب در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>پنل مدیریت شهری و واگذاری اراضی در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>پنل تعاملات بین‌الملل در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>پنل روابط عمومی در پارک‌های علم و فناوری</span></li>
+              <li class="flex gap-3 text-white/80 text-sm"><span class="accent-bullet"></span><span>ابزارهای نوین در روابط عمومی</span></li>
+              <li class="flex gap-3 text-white/60 text-xs italic pt-2 border-t border-white/5 mt-4"><span class="accent-bullet opacity-50"></span><span>به همراه بازدید از پارک فناوری</span></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="lg:col-span-3 fade-in">
+          <div class="meta-label mb-3">ویدئوی دوره</div>
+          <div class="video-placeholder" data-video="course-6.mp4">
+            <div class="video-placeholder-inner">
+              <div class="play-icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+              </div>
+              <div class="video-label">placeholder</div>
+              <div class="video-filename">assets/videos/course-6.mp4</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="relative z-10 px-6 md:px-16 pb-6 flex items-center justify-between text-xs text-white/30 tracking-widest">
+    <span>COURSE 06 / 06</span>
+    <span>ISTT × UNESCO</span>
+  </div>
+</section>
+
+<!-- =========================================================
+     SECTION 8 — CONTACT
+========================================================= -->
+<section id="contact" class="section-full grid-texture noise">
+  <div class="orb" style="background:#3b82f6; width:450px; height:450px; top:10%; right:-100px;"></div>
+  <div class="orb" style="background:#a78bfa; width:350px; height:350px; bottom:10%; left:-80px;"></div>
+
+  <div class="relative z-10 flex-1 flex items-center px-6 md:px-16 py-16">
+    <div class="max-w-6xl w-full mx-auto">
+
+      <div class="flex items-center gap-4 mb-10 fade-in">
+        <span class="accent-line" style="--accent:#a78bfa;"></span>
+        <span class="text-sm text-white/60 tracking-wider">ارتباط با ما</span>
+      </div>
+
+      <h2 class="text-4xl md:text-6xl font-black text-white leading-tight mb-10 fade-in">
+        دبیرخانه
+        <br/>
+        <span class="text-transparent bg-clip-text bg-gradient-to-l from-violet-400 to-blue-400">
+          شهرک علمی و تحقیقاتی اصفهان
+        </span>
+      </h2>
+
+      <div class="thin-divider mb-12"></div>
+
+      <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+        <a href="mailto:IRIS.Training@istt.ir" class="min-card p-7 block group">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center shrink-0 group-hover:border-violet-400 transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/70">
+                <rect x="3" y="5" width="18" height="14" rx="2"/>
+                <path d="m3 7 9 6 9-6"/>
+              </svg>
+            </div>
+            <div>
+              <div class="meta-label">پست الکترونیک</div>
+              <div class="meta-value mt-1">ایمیل دبیرخانه</div>
+            </div>
+          </div>
+          <div class="text-white font-medium text-base tracking-wide" dir="ltr">IRIS.Training@istt.ir</div>
+        </a>
+
+        <a href="tel:+983133931028" class="min-card p-7 block group">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center shrink-0 group-hover:border-violet-400 transition-colors">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/70">
+                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+              </svg>
+            </div>
+            <div>
+              <div class="meta-label">تلفن تماس</div>
+              <div class="meta-value mt-1">اطلاعات بیشتر</div>
+            </div>
+          </div>
+          <div class="text-white font-medium text-base tracking-wide" dir="ltr">031-33931028</div>
+        </a>
+
+        <div class="min-card p-7">
+          <div class="flex items-start gap-4 mb-5">
+            <div class="w-10 h-10 rounded-full border border-white/15 flex items-center justify-center shrink-0">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" class="text-white/70">
+                <path d="M20 10c0 7-8 12-8 12s-8-5-8-12a8 8 0 0 1 16 0z"/>
+                <circle cx="12" cy="10" r="3"/>
+              </svg>
+            </div>
+            <div>
+              <div class="meta-label">نشانی</div>
+              <div class="meta-value mt-1">محل دبیرخانه</div>
+            </div>
+          </div>
+          <div class="text-white/85 leading-relaxed text-sm">
+            اصفهان، شهرک علمی و تحقیقاتی اصفهان
+          </div>
+        </div>
+
+      </div>
+
+      <div class="thin-divider mb-10"></div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-6 items-center">
+        <div class="text-center md:text-right">
+          <div class="meta-label">برگزارکننده</div>
+          <div class="text-white/90 text-sm mt-2">شهرک علمی و تحقیقاتی اصفهان</div>
+        </div>
+        <div class="text-center md:text-right">
+          <div class="meta-label">با حمایت</div>
+          <div class="text-white/90 text-sm mt-2">وزارت علوم، تحقیقات و فناوری</div>
+        </div>
+        <div class="text-center md:text-right">
+          <div class="meta-label">همکاری</div>
+          <div class="text-white/90 text-sm mt-2">UNESCO Centre</div>
+        </div>
+        <div class="text-center md:text-right">
+          <div class="meta-label">مرکز منطقه‌ای</div>
+          <div class="text-white/90 text-sm mt-2">IRIS — Isfahan</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="relative z-10 border-t border-white/5 px-6 md:px-16 py-6 flex flex-col md:flex-row items-center justify-between gap-3 text-xs text-white/40">
+    <div>© ۱۴۰۴ شهرک علمی و تحقیقاتی اصفهان — تمامی حقوق محفوظ است</div>
+    <div class="tracking-wider">ISTT × UNESCO × IRIS</div>
+  </footer>
+</section>
+
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
