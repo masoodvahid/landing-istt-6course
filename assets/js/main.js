@@ -5,7 +5,9 @@
 (function () {
   'use strict';
 
-  // Fade-in on scroll
+  /* ---------------------------------------------------------
+     Fade-in on scroll
+  --------------------------------------------------------- */
   const fadeObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -17,10 +19,11 @@
     },
     { threshold: 0.12 }
   );
-
   document.querySelectorAll('.fade-in').forEach((el) => fadeObserver.observe(el));
 
-  // Active nav dot on scroll
+  /* ---------------------------------------------------------
+     Active nav dot on scroll
+  --------------------------------------------------------- */
   const sections = document.querySelectorAll('section[id]');
   const dots = document.querySelectorAll('.nav-dot');
 
@@ -37,45 +40,114 @@
     },
     { threshold: 0.5 }
   );
-
   sections.forEach((s) => navObserver.observe(s));
 
-  /* =========================================================
-     Video placeholder → <video> swap helper
-     When you drop the real mp4 files into assets/videos/,
-     this script automatically replaces each placeholder with
-     a playable <video> element. If the file is missing, the
-     placeholder stays visible.
-     ========================================================= */
-  document.querySelectorAll('.video-placeholder').forEach((ph) => {
-    const filename = ph.getAttribute('data-video');
-    if (!filename) return;
+  /* ---------------------------------------------------------
+     Image galleries + modal
+  --------------------------------------------------------- */
+  const GALLERIES = {
+    'course-1': { folder: '1st',  count: 25  },
+    'course-2': { folder: '2nd',  count: 135 },
+    'course-3': { folder: '3rd',  count: 73  },
+    'course-4': { folder: '4th',  count: 58  },
+    'course-5': { folder: '5th',  count: 77  },
+  };
 
-    const src = 'assets/videos/' + filename;
+  // ---- Modal ----
+  const modal = document.createElement('div');
+  modal.className = 'gallery-modal';
+  modal.innerHTML = `
+    <img class="gallery-modal-img" src="" alt="">
+    <button class="gallery-modal-btn gallery-modal-close" aria-label="بستن">✕</button>
+    <button class="gallery-modal-btn gallery-modal-prev" aria-label="قبلی">&#8250;</button>
+    <button class="gallery-modal-btn gallery-modal-next" aria-label="بعدی">&#8249;</button>
+    <div class="gallery-modal-counter"></div>
+  `;
+  document.body.appendChild(modal);
 
-    // Try to load the video; only swap if the file exists
-    fetch(src, { method: 'HEAD' })
-      .then((response) => {
-        if (!response.ok) return;
+  const modalImg     = modal.querySelector('.gallery-modal-img');
+  const modalCounter = modal.querySelector('.gallery-modal-counter');
+  let currentImages  = [];
+  let currentIndex   = 0;
 
-        const video = document.createElement('video');
-        video.src = src;
-        video.controls = true;
-        video.playsInline = true;
-        video.preload = 'metadata';
-        video.style.width = '100%';
-        video.style.height = '100%';
-        video.style.objectFit = 'cover';
-        video.style.display = 'block';
+  function showModalImage() {
+    modalImg.src = currentImages[currentIndex];
+    modalCounter.textContent = (currentIndex + 1) + ' / ' + currentImages.length;
+  }
 
-        // Clear placeholder content and insert the video
-        ph.innerHTML = '';
-        ph.classList.add('has-video');
-        ph.style.borderStyle = 'solid';
-        ph.appendChild(video);
-      })
-      .catch(() => {
-        // File missing — keep the placeholder
-      });
+  function openModal(images, index) {
+    currentImages = images;
+    currentIndex  = index;
+    showModalImage();
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  function step(dir) {
+    currentIndex = (currentIndex + dir + currentImages.length) % currentImages.length;
+    showModalImage();
+  }
+
+  modal.querySelector('.gallery-modal-close').addEventListener('click', closeModal);
+  modal.querySelector('.gallery-modal-prev').addEventListener('click', () => step(+1));
+  modal.querySelector('.gallery-modal-next').addEventListener('click', () => step(-1));
+  modal.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
+
+  document.addEventListener('keydown', (e) => {
+    if (!modal.classList.contains('active')) return;
+    if (e.key === 'Escape')      closeModal();
+    if (e.key === 'ArrowLeft')   step(+1);
+    if (e.key === 'ArrowRight')  step(-1);
   });
+
+  // ---- Poster click → modal ----
+  document.querySelectorAll('.poster-frame').forEach((frame) => {
+    const img = frame.querySelector('img');
+    if (!img) return;
+    frame.addEventListener('click', () => openModal([img.src], 0));
+  });
+
+  // ---- Build galleries ----
+  document.querySelectorAll('.img-gallery[data-gallery]').forEach((el) => {
+    const id   = el.dataset.gallery;
+    const info = GALLERIES[id];
+    if (!info || info.count === 0) {
+      el.innerHTML = '<div class="img-gallery-empty">تصاویر به زودی اضافه می‌شود</div>';
+      return;
+    }
+
+    const images = Array.from({ length: info.count }, (_, i) =>
+      'assets/images/' + info.folder + '/' + id + '-photo-' + String(i + 1).padStart(3, '0') + '.jpg'
+    );
+
+    // Inject image count into the sibling label
+    const label = el.previousElementSibling;
+    if (label && label.classList.contains('meta-label')) {
+      label.style.display        = 'flex';
+      label.style.justifyContent = 'space-between';
+      label.style.alignItems     = 'center';
+      const badge = document.createElement('span');
+      badge.className   = 'gallery-count-badge';
+      badge.textContent = images.length + ' تصویر';
+      label.appendChild(badge);
+    }
+
+    images.forEach((src, idx) => {
+      const item = document.createElement('div');
+      item.className = 'img-gallery-item';
+      const img = document.createElement('img');
+      img.src     = src;
+      img.loading = 'lazy';
+      img.alt     = '';
+      item.appendChild(img);
+      item.addEventListener('click', () => openModal(images, idx));
+      el.appendChild(item);
+    });
+  });
+
 })();
