@@ -1,10 +1,52 @@
 /* =========================================================
-   Local font definitions — Vazirmatn (free alternative to IRAN Yekan)
+   Local font definitions
    All files are served from assets/fonts/
    ========================================================= */
 
+/* Nian — heading font */
 @font-face {
-  font-family: 'IRANYekan';
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Nian-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Nian_Semi Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Nian-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/Nian-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/Nian-Black.ttf') format('truetype');
+}
+
+/* Vazirmatn — body font */
+@font-face {
+  font-family: 'Vazirmatn';
   font-style: normal;
   font-weight: 300;
   font-display: swap;
@@ -12,7 +54,7 @@
 }
 
 @font-face {
-  font-family: 'IRANYekan';
+  font-family: 'Vazirmatn';
   font-style: normal;
   font-weight: 400;
   font-display: swap;
@@ -20,7 +62,7 @@
 }
 
 @font-face {
-  font-family: 'IRANYekan';
+  font-family: 'Vazirmatn';
   font-style: normal;
   font-weight: 500;
   font-display: swap;
@@ -28,7 +70,7 @@
 }
 
 @font-face {
-  font-family: 'IRANYekan';
+  font-family: 'Vazirmatn';
   font-style: normal;
   font-weight: 700;
   font-display: swap;
@@ -36,7 +78,7 @@
 }
 
 @font-face {
-  font-family: 'IRANYekan';
+  font-family: 'Vazirmatn';
   font-style: normal;
   font-weight: 800;
   font-display: swap;
@@ -44,18 +86,9 @@
 }
 
 @font-face {
-  font-family: 'IRANYekan';
+  font-family: 'Vazirmatn';
   font-style: normal;
   font-weight: 900;
   font-display: swap;
   src: url('../fonts/Vazirmatn-Black.woff2') format('woff2');
-}
-
-/* Also register as 'Vazirmatn' as a fallback alias */
-@font-face {
-  font-family: 'Vazirmatn';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url('../fonts/Vazirmatn-Regular.woff2') format('woff2');
 }
