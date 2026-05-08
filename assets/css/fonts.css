@@ -51,6 +51,47 @@
   src: url('../fonts/Vazirmatn-Black.woff2') format('woff2');
 }
 
+/* Nian — heading font */
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('../fonts/Nian-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('../fonts/Nian_Semi Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/Nian-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url('../fonts/Nian-ExtraBold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Nian';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url('../fonts/Nian-Black.ttf') format('truetype');
+}
+
 /* Also register as 'Vazirmatn' as a fallback alias */
 @font-face {
   font-family: 'Vazirmatn';
